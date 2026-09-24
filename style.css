@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --green: #1e6847;
+    --dark-green: #123e2d;
+    --gold: #d69b36;
+    --cream: #fbfaf6;
+    --light: #f0f5f1;
+    --white: #fff;
+    --text: #202923;
+    --muted: #6d766f;
+    --border: #e0e7e2;
+    --shadow: 0 18px 50px rgba(18, 62, 45, .11);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.65;
+}
+
+a { text-decoration: none; color: inherit; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.nav-inner {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--dark-green);
+}
+
+.logo > span:last-child > span { color: var(--gold); }
+.logo-icon { color: var(--gold); font-size: 26px; }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--green); }
+
+.nav-button {
+    background: var(--green);
+    color: white !important;
+    padding: 11px 18px;
+    border-radius: 999px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    color: var(--dark-green);
+}
+
+.hero {
+    min-height: 670px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(9,35,23,.88), rgba(9,35,23,.48), rgba(9,35,23,.18)),
+        url("images/hero-belagavi.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #e8b95c;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.eyebrow.green { color: var(--green); }
+.eyebrow.gold { color: #f0bf5d; }
+
+.hero h1 {
+    max-width: 800px;
+    font: 700 clamp(45px, 7vw, 78px)/1.04 "Playfair Display", Georgia, serif;
+    letter-spacing: -2px;
+}
+
+.hero h1 span { color: #f0bd5b; }
+
+.hero p {
+    max-width: 650px;
+    margin: 25px 0 30px;
+    color: rgba(255,255,255,.87);
+    font-size: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 13px 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-primary:hover { background: var(--dark-green); }
+
+.btn-white {
+    background: white;
+    color: var(--dark-green);
+}
+
+.btn-outline {
+    background: white;
+    border-color: var(--border);
+    color: var(--dark-green);
+}
+
+.quick-section {
+    margin-top: -42px;
+    position: relative;
+    z-index: 5;
+}
+
+.quick-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.quick-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 16px;
+    border-right: 1px solid var(--border);
+}
+
+.quick-item > span { font-size: 23px; }
+.quick-item small { display: block; color: #8b938d; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; }
+.quick-item strong { font-size: 14px; }
+
+.quick-button {
+    background: var(--gold);
+    color: white;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section { padding: 100px 0; }
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.heading.center {
+    display: block;
+    max-width: 780px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading h2 {
+    font: 700 clamp(32px, 4vw, 50px)/1.1 "Playfair Display", Georgia, serif;
+    color: var(--dark-green);
+}
+
+.heading h2 span { color: var(--gold); }
+
+.heading p {
+    max-width: 560px;
+    color: var(--muted);
+}
+
+.heading.center p { margin: 14px auto 0; }
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.step-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 30px;
+}
+
+.step-number {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.step-card h3 {
+    color: var(--dark-green);
+    margin-bottom: 7px;
+}
+
+.step-card p { color: var(--muted); font-size: 14px; }
+
+.places-section { background: var(--light); }
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.place-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(20,50,35,.06);
+    transition: .25s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.place-image {
+    height: 205px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: #dce8df;
+}
+
+.place-image span {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(255,255,255,.94);
+    color: var(--dark-green);
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* Add your own images using these filenames */
+.belagavi-fort-img { background-image: url("images/belagavi-fort.jpg"); }
+.gokak-img { background-image: url("images/gokak-falls.jpg"); }
+.kittur-img { background-image: url("images/kittur-fort.jpg"); }
+.godachinmalki-img { background-image: url("images/godachinmalki-falls.jpg"); }
+.kapileshwara-img { background-image: url("images/kapileshwara-temple.jpg"); }
+.rajahansagad-img { background-image: url("images/rajahansagad-fort.jpg"); }
+.halasi-img { background-image: url("images/halasi.jpg"); }
+.sada-img { background-image: url("images/sada-falls.jpg"); }
+.local-img { background-image: url("images/belagavi-local-life.jpg"); }
+
+.place-content { padding: 21px; }
+.place-content small { color: #8b938d; font-size: 12px; font-weight: 600; }
+.place-content h3 {
+    color: var(--dark-green);
+    font: 700 24px/1.2 "Playfair Display", Georgia, serif;
+    margin: 7px 0;
+}
+.place-content p { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+
+.details-button {
+    border: none;
+    background: none;
+    color: var(--green);
+    font-weight: 700;
+    padding: 0;
+}
+
+.details-button:hover { color: var(--gold); }
+
+.three-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.simple-card, .guide-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 30px;
+    text-align: center;
+}
+
+.simple-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.simple-card h3, .guide-card h3 {
+    color: var(--dark-green);
+    font: 700 24px "Playfair Display", Georgia, serif;
+}
+
+.simple-card span {
+    color: #89918c;
+    font-size: 12px;
+}
+
+.simple-card p, .guide-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.simple-card strong { color: var(--gold); }
+
+.light-section { background: var(--light); }
+
+.avatar {
+    width: 78px;
+    height: 78px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #e8f3eb;
+    color: var(--green);
+    font: 700 28px "Playfair Display", Georgia, serif;
+}
+
+.guide-card b {
+    display: block;
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.culture-section {
+    background: var(--dark-green);
+    color: white;
+}
+
+.culture-section .heading h2 { color: white; }
+.culture-section .heading p { color: rgba(255,255,255,.7); }
+
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.culture-grid > div {
+    padding: 27px;
+    border-radius: 17px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.13);
+}
+
+.culture-grid span { font-size: 30px; }
+.culture-grid h3 { margin: 10px 0 5px; }
+.culture-grid p { color: rgba(255,255,255,.67); font-size: 14px; }
+
+.booking-section { background: #f4f0e6; }
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.booking-intro h2 {
+    font: 700 48px/1.1 "Playfair Display", Georgia, serif;
+    color: var(--dark-green);
+}
+
+.booking-intro > p {
+    color: var(--muted);
+    margin: 20px 0;
+}
+
+.check-list p {
+    color: var(--dark-green);
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.booking-form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: 16px;
+}
+
+.booking-form h3 {
+    color: var(--dark-green);
+    font: 700 30px "Playfair Display", Georgia, serif;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.booking-form label {
+    display: grid;
+    gap: 7px;
+    color: #4f5953;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: #fbfcfb;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(30,104,71,.08);
+}
+
+.full { width: 100%; border: none; }
+
+.success-message {
+    display: none;
+    background: #e8f6eb;
+    color: var(--dark-green);
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.footer {
+    background: #102d20;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo { color: white; margin-bottom: 12px; }
+
+.footer p {
+    color: rgba(255,255,255,.62);
+    font-size: 14px;
+}
+
+.footer h4 { margin-bottom: 10px; }
+.footer a:not(.footer-logo) { display: block; color: rgba(255,255,255,.65); margin: 5px 0; font-size: 14px; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    margin-top: 35px;
+    padding-top: 17px;
+    color: rgba(255,255,255,.4);
+    font-size: 12px;
+}
+
+/* DETAILS MODAL */
+
+.details-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.details-modal.open { display: flex; }
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(6,23,15,.78);
+    backdrop-filter: blur(6px);
+}
+
+.details-box {
+    width: min(950px, 100%);
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 2;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.35);
+}
+
+.close-modal {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    z-index: 5;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.95);
+    color: var(--dark-green);
+    font-size: 28px;
+}
+
+.details-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 330px;
+}
+
+.details-image {
+    min-height: 330px;
+    background: #e3ece5 center/cover no-repeat;
+    background-image: var(--detail-image);
+    display: flex;
+    align-items: end;
+    padding: 20px;
+}
+
+.details-image span {
+    background: rgba(255,255,255,.92);
+    color: var(--green);
+    border-radius: 8px;
+    padding: 7px 11px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.details-heading {
+    padding: 55px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-heading > span {
+    display: inline-block;
+    width: fit-content;
+    background: #eaf4ed;
+    color: var(--green);
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.details-heading h2 {
+    color: var(--dark-green);
+    font: 700 43px/1.1 "Playfair Display", Georgia, serif;
+    margin: 13px 0 8px;
+}
+
+.details-heading p {
+    color: #89918c;
+    font-size: 13px;
+}
+
+.details-body { padding: 30px 35px 35px; }
+
+.details-body h3 {
+    color: var(--dark-green);
+    font-size: 18px;
+    margin: 17px 0 6px;
+}
+
+.details-body > h3:first-child { margin-top: 0; }
+
+.details-body > p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.details-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 12px;
+}
+
+.details-columns ul {
+    padding-left: 19px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.details-columns li { margin: 6px 0; }
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 27px;
+    flex-wrap: wrap;
+}
+
+.source-note {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+    font-size: 11px !important;
+    color: #89918c !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 980px) {
+    .places-grid { grid-template-columns: repeat(2, 1fr); }
+    .quick-card { grid-template-columns: 1fr 1fr; }
+    .quick-item { border-right: 0; }
+    .booking-layout { grid-template-columns: 1fr; }
+    .steps, .three-grid, .culture-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 720px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 4%;
+        right: 4%;
+        padding: 15px;
+        background: white;
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-links.show { display: flex; }
+
+    .hero { min-height: 610px; }
+    .section { padding: 75px 0; }
+
+    .heading { display: block; }
+    .heading > p { margin-top: 13px; }
+
+    .places-grid,
+    .steps,
+    .three-grid,
+    .culture-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-card { grid-template-columns: 1fr; }
+
+    .form-row { grid-template-columns: 1fr; }
+
+    .details-top { grid-template-columns: 1fr; }
+    .details-image { min-height: 230px; }
+    .details-heading { padding: 25px; }
+    .details-heading h2 { font-size: 34px; }
+    .details-body { padding: 25px; }
+    .details-columns { grid-template-columns: 1fr; gap: 5px; }
+}

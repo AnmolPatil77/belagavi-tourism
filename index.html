@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belagavi Local | Smart Local Tourism Portal</title>
+    <meta name="description" content="Discover places, heritage, nature, local culture, homestays and guides in Belagavi.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="#home" class="logo">
+            <span class="logo-icon">✦</span>
+            <span>Belagavi<span>Local</span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#places">Places</a>
+            <a href="#stays">Homestays</a>
+            <a href="#guides">Guides</a>
+            <a href="#culture">Culture</a>
+            <a href="#booking" class="nav-button">Plan My Trip</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <span class="eyebrow">SMART LOCAL TOURISM BUSINESS PORTAL</span>
+            <h1>Discover the stories and beauty of <span>Belagavi</span></h1>
+            <p>
+                Explore historic forts, waterfalls, temples, local culture,
+                homestays and guides — then plan your experience when you are ready.
+            </p>
+            <div class="hero-buttons">
+                <a href="#places" class="btn btn-primary">Explore Places →</a>
+                <a href="#booking" class="btn btn-white">Plan My Trip</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK INTRO -->
+    <section class="quick-section">
+        <div class="container quick-card">
+            <div class="quick-item">
+                <span>📍</span>
+                <div>
+                    <small>DESTINATION</small>
+                    <strong>Belagavi & nearby</strong>
+                </div>
+            </div>
+            <div class="quick-item">
+                <span>🏛️</span>
+                <div>
+                    <small>DISCOVER</small>
+                    <strong>History • Nature • Culture</strong>
+                </div>
+            </div>
+            <div class="quick-item">
+                <span>📝</span>
+                <div>
+                    <small>BOOK</small>
+                    <strong>Only after exploring</strong>
+                </div>
+            </div>
+            <a href="#places" class="quick-button">Start Exploring</a>
+        </div>
+    </section>
+
+    <!-- WHY PORTAL -->
+    <section class="section">
+        <div class="container">
+            <div class="heading center">
+                <span class="eyebrow green">HOW IT WORKS</span>
+                <h2>Explore first. <span>Plan later.</span></h2>
+                <p>
+                    Visitors can read about a destination, understand its history,
+                    see what makes it interesting and then decide whether to send a booking request.
+                </p>
+            </div>
+
+            <div class="steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Choose a place</h3>
+                    <p>Browse destinations around Belagavi and select a place that interests you.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Learn about it</h3>
+                    <p>Read its history, highlights, things to do and useful visitor information.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Plan your visit</h3>
+                    <p>If you like the destination, continue to the trip planning form.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLACES -->
+    <section class="section places-section" id="places">
+        <div class="container">
+            <div class="heading">
+                <div>
+                    <span class="eyebrow green">EXPLORE BELAGAVI</span>
+                    <h2>Places with a story</h2>
+                </div>
+                <p>Click <strong>View Details</strong> to learn about each destination.</p>
+            </div>
+
+            <div class="places-grid">
+
+                <article class="place-card">
+                    <div class="place-image belagavi-fort-img">
+                        <span>HERITAGE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Belagavi</small>
+                        <h3>Belagavi Fort</h3>
+                        <p>A historic fort and one of the important heritage landmarks of the city.</p>
+                        <button class="details-button" data-place="belagavi-fort">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image gokak-img">
+                        <span>NATURE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Gokak</small>
+                        <h3>Gokak Falls</h3>
+                        <p>A dramatic waterfall on the Ghataprabha River with a long industrial history.</p>
+                        <button class="details-button" data-place="gokak-falls">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image kittur-img">
+                        <span>HERITAGE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Kittur</small>
+                        <h3>Kittur Fort</h3>
+                        <p>A historic fortress strongly associated with Queen Kittur Chennamma.</p>
+                        <button class="details-button" data-place="kittur-fort">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image godachinmalki-img">
+                        <span>NATURE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Belagavi district</small>
+                        <h3>Godachinmalki Falls</h3>
+                        <p>A two-stage waterfall in a rugged valley, also known as Markandeya Falls.</p>
+                        <button class="details-button" data-place="godachinmalki">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image kapileshwara-img">
+                        <span>SPIRITUAL</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Belagavi</small>
+                        <h3>Kapileshwara Temple</h3>
+                        <p>A local temple destination for visitors interested in spirituality and city heritage.</p>
+                        <button class="details-button" data-place="kapileshwara">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image rajahansagad-img">
+                        <span>HERITAGE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Belagavi district</small>
+                        <h3>Rajahansagad Fort</h3>
+                        <p>A hill-fort destination offering a combination of history and landscape.</p>
+                        <button class="details-button" data-place="rajahansagad">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image halasi-img">
+                        <span>HERITAGE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Halasi</small>
+                        <h3>Halasi</h3>
+                        <p>A heritage destination known for historic temples and architecture.</p>
+                        <button class="details-button" data-place="halasi">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image sada-img">
+                        <span>NATURE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Belagavi district</small>
+                        <h3>Sada Falls</h3>
+                        <p>A forest and waterfall destination suited to visitors looking for an outdoor experience.</p>
+                        <button class="details-button" data-place="sada-falls">View Details →</button>
+                    </div>
+                </article>
+
+                <article class="place-card">
+                    <div class="place-image local-img">
+                        <span>LOCAL LIFE</span>
+                    </div>
+                    <div class="place-content">
+                        <small>📍 Belagavi</small>
+                        <h3>Belagavi Local Life</h3>
+                        <p>Food, markets, local stories, shopping and everyday cultural experiences.</p>
+                        <button class="details-button" data-place="local-life">View Details →</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOMESTAYS -->
+    <section class="section" id="stays">
+        <div class="container">
+            <div class="heading center">
+                <span class="eyebrow green">STAY LOCAL</span>
+                <h2>Homestays</h2>
+                <p>Sample listings for the project. Replace these with real local businesses and verified prices.</p>
+            </div>
+
+            <div class="three-grid">
+                <article class="simple-card">
+                    <div class="simple-icon">🏡</div>
+                    <h3>Green Valley Homestay</h3>
+                    <span>📍 Belagavi</span>
+                    <p>Comfortable stay with a local-host experience.</p>
+                    <strong>₹1,500 / night</strong>
+                </article>
+
+                <article class="simple-card">
+                    <div class="simple-icon">🏠</div>
+                    <h3>Heritage Home Stay</h3>
+                    <span>📍 Belagavi</span>
+                    <p>Stay close to the city and experience local hospitality.</p>
+                    <strong>₹1,800 / night</strong>
+                </article>
+
+                <article class="simple-card">
+                    <div class="simple-icon">🌿</div>
+                    <h3>Countryside Stay</h3>
+                    <span>📍 Near Belagavi</span>
+                    <p>A quieter stay surrounded by greenery and local surroundings.</p>
+                    <strong>₹1,300 / night</strong>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section class="section light-section" id="guides">
+        <div class="container">
+            <div class="heading center">
+                <span class="eyebrow green">LOCAL GUIDES</span>
+                <h2>Meet local guides</h2>
+                <p>Sample profiles. Replace these with actual guides when the portal is connected to local businesses.</p>
+            </div>
+
+            <div class="three-grid">
+                <article class="guide-card">
+                    <div class="avatar">R</div>
+                    <h3>Rahul</h3>
+                    <b>History & City Tours</b>
+                    <p>City walks, heritage stories and sightseeing.</p>
+                </article>
+
+                <article class="guide-card">
+                    <div class="avatar">P</div>
+                    <h3>Priya</h3>
+                    <b>Food & Culture</b>
+                    <p>Local food, markets and cultural experiences.</p>
+                </article>
+
+                <article class="guide-card">
+                    <div class="avatar">M</div>
+                    <h3>Mahesh</h3>
+                    <b>Nature & Waterfalls</b>
+                    <p>Nature-focused day trips around Belagavi.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CULTURE -->
+    <section class="section culture-section" id="culture">
+        <div class="container">
+            <div class="heading center">
+                <span class="eyebrow gold">LOCAL CULTURE</span>
+                <h2>Experience Belagavi like a local</h2>
+                <p>Tourism can be more than visiting a landmark. Discover food, traditions and local life.</p>
+            </div>
+
+            <div class="culture-grid">
+                <div><span>🍛</span><h3>Local Food</h3><p>Discover regional dishes and local flavours.</p></div>
+                <div><span>🎨</span><h3>Local Crafts</h3><p>Learn about handmade products and traditional skills.</p></div>
+                <div><span>🎉</span><h3>Festivals</h3><p>Explore celebrations and cultural traditions.</p></div>
+                <div><span>🛍️</span><h3>Markets</h3><p>Experience shopping and everyday local life.</p></div>
+                <div><span>📖</span><h3>Local Stories</h3><p>Discover stories connected to people and places.</p></div>
+                <div><span>🌿</span><h3>Village Experiences</h3><p>Explore rural surroundings and community experiences.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section booking-section" id="booking">
+        <div class="container booking-layout">
+            <div class="booking-intro">
+                <span class="eyebrow green">READY TO PLAN?</span>
+                <h2>Plan your Belagavi experience.</h2>
+                <p>
+                    This form appears after visitors have explored the destinations.
+                    Select a place, provide your travel details and send a request.
+                </p>
+                <div class="check-list">
+                    <p>✓ Choose a destination</p>
+                    <p>✓ Select your experience</p>
+                    <p>✓ Add your travel date</p>
+                    <p>✓ Send your request</p>
+                </div>
+            </div>
+
+            <form class="booking-form" id="bookingForm">
+                <h3>Plan My Trip</h3>
+
+                <div class="form-row">
+                    <label>Full Name
+                        <input type="text" id="name" required placeholder="Your name">
+                    </label>
+                    <label>Phone
+                        <input type="tel" id="phone" required placeholder="+91">
+                    </label>
+                </div>
+
+                <label>Email
+                    <input type="email" id="email" required placeholder="you@example.com">
+                </label>
+
+                <div class="form-row">
+                    <label>Destination
+                        <select id="destination" required>
+                            <option value="">Select a place</option>
+                            <option>Belagavi Fort</option>
+                            <option>Gokak Falls</option>
+                            <option>Kittur Fort</option>
+                            <option>Godachinmalki Falls</option>
+                            <option>Kapileshwara Temple</option>
+                            <option>Rajahansagad Fort</option>
+                            <option>Halasi</option>
+                            <option>Sada Falls</option>
+                            <option>Belagavi Local Life</option>
+                        </select>
+                    </label>
+
+                    <label>Guests
+                        <select id="guests" required>
+                            <option value="">Select</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>Visit Date
+                        <input type="date" id="visitDate" required>
+                    </label>
+
+                    <label>Experience
+                        <select id="experience" required>
+                            <option value="">Select</option>
+                            <option>Sightseeing</option>
+                            <option>Homestay</option>
+                            <option>Local Guide</option>
+                            <option>Food & Culture</option>
+                            <option>Complete Trip</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>Message
+                    <textarea id="message" rows="4" placeholder="Tell us about your trip..."></textarea>
+                </label>
+
+                <button type="submit" class="btn btn-primary full">Send Booking Request</button>
+                <div class="success-message" id="successMessage"></div>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <a href="#home" class="logo footer-logo">
+                <span class="logo-icon">✦</span>
+                <span>Belagavi<span>Local</span></span>
+            </a>
+            <p>Discover. Stay. Experience Belagavi.</p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <a href="#places">Places</a>
+            <a href="#stays">Homestays</a>
+            <a href="#guides">Guides</a>
+            <a href="#culture">Culture</a>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>📍 Belagavi, Karnataka</p>
+            <p>📧 hello@belagavilocal.com</p>
+            <p>📞 +91 98765 43210</p>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        © 2026 Belagavi Local Tourism • College Project
+    </div>
+</footer>
+
+<!-- PLACE DETAILS WINDOW -->
+<div class="details-modal" id="detailsModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="details-box">
+        <button class="close-modal" id="closeModal">×</button>
+
+        <div class="details-top">
+            <div class="details-image" id="detailsImage">
+                <span id="detailsImageText">Add your image</span>
+            </div>
+
+            <div class="details-heading">
+                <span id="detailsCategory"></span>
+                <h2 id="detailsTitle"></h2>
+                <p id="detailsLocation"></p>
+            </div>
+        </div>
+
+        <div class="details-body">
+            <h3>About this place</h3>
+            <p id="detailsAbout"></p>
+
+            <h3>History</h3>
+            <p id="detailsHistory"></p>
+
+            <div class="details-columns">
+                <div>
+                    <h3>Why visit?</h3>
+                    <ul id="detailsWhy"></ul>
+                </div>
+
+                <div>
+                    <h3>Things to know</h3>
+                    <ul id="detailsTips"></ul>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="planPlace">Plan This Place →</button>
+                <button class="btn btn-outline" id="keepExploring">Keep Exploring</button>
+            </div>
+
+            <p class="source-note">
+                Historical and tourism information is based on publicly available Karnataka Tourism information.
+                Verify local timings, access conditions and current visitor rules before publishing the final project.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
